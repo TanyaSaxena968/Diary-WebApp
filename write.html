@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DayBook</title>
     <link rel="stylesheet" href="sswrite.css">
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <header>
@@ -17,11 +20,19 @@
             <button class="btnSubmit">Save</button>
         </nav>
     </header>
-    <div class="container">
-        <h3>Notes</h3>
-        <button class="create">create notes</button>
-        <div class="notes-container">
-            <!-- <p contenteditable="true" class="input-box"></p> -->
+    <div class="home">
+        <div class="sidebar">
+            <span class="name"><ion-icon name="bonfire-outline"></ion-icon>Hello XYZ</span>
+            <!--calendar-->
+            <iframe src="calendar\calendar.html" class="calendar-iframe"></iframe>
+            
+        </div>
+        <div class="container">
+            <h3>Notes</h3>
+            <button class="create">create notes</button>
+            <div class="notes-container">
+                <!-- <p contenteditable="true" class="input-box"></p> -->
+            </div>
         </div>
     </div>
     <script src="scriptwrite.js"></script>
