@@ -18,15 +18,3 @@ btnPopup.addEventListener('click',()=>{
 iconClose.addEventListener('click',()=>{
     wrapper.classList.remove('active-popup'); 
 });
-
-const notesContainer=document.querySelector('.notes-container');
-const createBtn=document.querySelector('.create');
-let notes=document.querySelectorAll('.input-box');
-createBtn.addEventListener("click",function(){
-    const inputBox = document.createElement("p");
-    inputBox.contentEditable = true;
-    inputBox.className="input-box";
-
-    // Append the input element to the notes container
-    notesContainer.appendChild(inputBox);
-});
