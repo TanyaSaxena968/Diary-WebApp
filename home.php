@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,15 +25,15 @@
         <span class="icon-close"><ion-icon name="close"><ion-icon name="close"></ion-icon></span>
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="write.html">
+            <form action="login_script.php" method="post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="email" required>
+                    <input type="email" name="user_name" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
@@ -48,7 +51,7 @@
 
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="write.html">
+            <form action="signup_script.php" method="post">
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" required>
@@ -56,19 +59,19 @@
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="mail" required>
+                    <input type="mail" name="user_name" required>
                     <label>Email</label>
                 </div>
                 <div class="input-box">
                     <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                    <input type="password" required>
+                    <input type="password" name="password" required>
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
                     <label><input type="checkbox">I agree to the terms & conditions</label>
                 </div>
                 
-                <button type="submit" class="btn">Sign In</button>
+                <button type="submit" class="btn">Sign Up</button>
                 <div class="login-register">
                     <p>Already have an account?
                     <a href="#" class="login-link">Login</a></p>

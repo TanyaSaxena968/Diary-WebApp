@@ -1,3 +1,10 @@
+<?php
+session_start();
+include("connection.php");
+include("functions.php");
+
+$user_data = check_login($con);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +24,13 @@
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
+            <a href="logout.php">Logout</a>
             <button class="btnSubmit">Save</button>
         </nav>
     </header>
     <div class="home">
         <div class="sidebar">
-            <span class="name"><ion-icon name="bonfire-outline"></ion-icon>Hello XYZ</span>
+            <span class="name"><ion-icon name="bonfire-outline"></ion-icon>Hello <?php echo $user_data['user_name']; ?></span>
             <!--calendar-->
             <iframe src="calendar\calendar.html" class="calendar-iframe"></iframe>
             
